@@ -37,6 +37,7 @@ class Task2 implements Runnable {
 }
 public class Multi_Thread {
     public static void main(String[] args) {
+        System.out.println("Start of main thread");
         //Extends thread (class is now limited to extending thread and can not extend any other class, enables tight coupling)
         // Task1 task = new Task1();
         // Task2 task2 = new Task2();
@@ -47,6 +48,12 @@ public class Multi_Thread {
         Thread task2 = new Thread(r2);
         task1.start();
         task2.start();
+        try{
+            task1.join();
+            task2.join();
+        }catch(InterruptedException e){
 
+        }
+        System.out.println("End of main thread");
     }
 }
