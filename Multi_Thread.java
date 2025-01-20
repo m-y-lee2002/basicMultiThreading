@@ -35,6 +35,9 @@ class Task2 implements Runnable {
         }
     }
 }
+/**
+ * Join is a gaurenteed pause on a thread until the thread that is joined is completed.
+ */
 public class Multi_Thread {
     public static void main(String[] args) {
         System.out.println("Start of main thread");
